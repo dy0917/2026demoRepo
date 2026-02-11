@@ -1,1 +1,4 @@
-// this is a hello world
+const shoppinglist = ["cheese", "milk", "chips", "paper", "soap"];
+
+const alist = [];
+

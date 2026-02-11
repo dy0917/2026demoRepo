@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 1 Exercise 3</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        min-height: 100vh;
+        align-items: stretch;
+      }
+      .column {
+        background: goldenrod;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+      button {
+        background: black;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 1em 2em;
+        margin: 1em;
+        border: 0 none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="column1">
+        <h1 id="heading1">Hello</h1>
+        <input id="text1" type="text" value="" />
+        <!-- extension -->
+        <button onclick="changeFirst()">Change Me</button>
+      </div>
+      <div class="column" id="column2">
+        <h1 id="heading2">World</h1>
+        <input id="text2" type="text" value="" />
+        <!-- extension -->
+        <button onclick="changeSecond()">Change Me</button>
+      </div>
+    </div>
+    <script>
+      function changeFirst() {
+        document.getElementById("column1").style.backgroundColor = "purple";
+        document.getElementById("heading1").innerText = "Greetings"; // main exercise
+        console.log("value", document.getElementById("text1").value);
+        if (document.getElementById("text1").value === "") {
+          alert("give a value to input");
+        } else {
+          document.getElementById("heading1").innerText =
+            document.getElementById("text1").value; // extension
+        }
+      }
+      function changeSecond() {
+        document.getElementById("column2").style.backgroundColor = "teal";
+        document.getElementById("heading2").innerText = "Earthlings"; // main exercise
+        document.getElementById("heading2").innerText =
+          document.getElementById("text2").value; // extension
+      }
+    </script>
+  </body>
+</html>
